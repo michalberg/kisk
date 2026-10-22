@@ -393,8 +393,8 @@
   align-items: center;
   gap: 0.4cqw;
 }
-.no-qr .big-count {
-  font-size: 8cqw;
+.no-qr .counter {
+  font-size: 3.6cqw;
 }
 .q-main {
   display: flex;
@@ -428,10 +428,10 @@
   font-size: 4cqw;
 }
 .q-text.small {
-  font-size: 3.6cqw;
+  font-size: 4.8cqw;
 }
 .q-text.small.long {
-  font-size: 3cqw;
+  font-size: 3.9cqw;
 }
 .q-hint {
   margin: 1.8cqw 0 0;
@@ -539,16 +539,17 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 0.9cqw;
+  gap: 0.8cqw;
   padding: 1.2cqw 0 0;
   border-top: 0.22cqw solid var(--line);
-  font-size: 2.2cqw;
-  font-weight: 700;
-  color: var(--muted);
+  font-size: 3.2cqw;
+  font-weight: 900;
+  color: var(--forest);
 }
+/* number and label read as one phrase: Tusker digits sized to match the label */
 .big-count {
   font-family: var(--font-display);
-  font-size: 6.4cqw;
+  font-size: 1.55em;
   font-weight: 700;
   color: var(--forest);
   line-height: 1;
@@ -564,28 +565,25 @@
 .results-wrap .chart {
   flex: 1;
   min-height: 0;
-  margin-top: 2.2cqw;
+  margin-top: 1.6cqw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: safe center;
 }
 .results-wait {
   display: flex;
   align-items: baseline;
   gap: 1.2cqw;
-  font-size: 2.6cqw;
-  font-weight: 700;
-  color: var(--muted);
-}
-.results-wait .big-count {
-  font-size: 10cqw;
+  font-size: 4.4cqw;
+  font-weight: 900;
+  color: var(--forest);
 }
 
 /* horizontal bars */
 .bars-chart {
   display: flex;
   flex-direction: column;
-  gap: 1.3cqw;
+  gap: 1cqw;
 }
 .hb-row {
   display: grid;
@@ -595,6 +593,9 @@
 }
 .bars-chart.dense {
   gap: 0.5cqw;
+}
+.bars-chart.dense .hb-row {
+  grid-template-columns: 47cqw 1fr 11cqw;
 }
 .hb-label {
   display: flex;
@@ -613,7 +614,7 @@
   background: var(--soft);
 }
 .bars-chart.dense .hb-track {
-  height: 2.6cqw;
+  height: 2.4cqw;
 }
 .hb-bar {
   height: 100%;
@@ -658,7 +659,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2cqw;
-  height: 21cqw;
+  height: 19cqw;
 }
 .scale-chart.compact .sc-bars {
   height: 16cqw;
@@ -851,4 +852,14 @@
 }
 .compact .sc-val span {
   display: none;
+}
+
+.results-wrap .kicker {
+  margin-bottom: 1.2cqw;
+}
+.hb-val {
+  line-height: 1;
+}
+.bars-chart.dense .hb-val b {
+  font-size: 2.9cqw;
 }
