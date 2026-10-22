@@ -7,6 +7,8 @@ export interface Option {
 
 interface Base {
   section?: string;
+  /** background: white (default) or forest green */
+  bg?: 'forest';
   notes?: string;
 }
 
@@ -15,6 +17,12 @@ export interface TitleSlide extends Base {
   title: string;
   subtitle?: string;
   small?: string;
+}
+export interface SectionSlide extends Base {
+  type: 'section';
+  kicker?: string;
+  title: string;
+  subtitle?: string;
 }
 export interface BigNumberSlide extends Base {
   type: 'big-number';
@@ -65,6 +73,7 @@ export interface QrSlide extends Base {
 
 export type Slide =
   | TitleSlide
+  | SectionSlide
   | BigNumberSlide
   | ListSlide
   | TextSlide

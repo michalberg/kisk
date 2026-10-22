@@ -4,10 +4,11 @@
     {
       "type": "title",
       "section": "Úvod",
-      "title": "Dilemata použití AI ve volebních kampaních",
-      "subtitle": "Co AI v kampani dělala, kde se mýlila a co dělat smí",
+      "title": "Dilemata použití AI ve ==volebních kampaních==",
+      "subtitle": "Michal Berg, michal.berg@zeleni.cz",
       "small": "KISK MUNI",
-      "notes": "Přednáška na 90 minut: úvod a kampaň 25 minut, deset dilemat po 5 minutách, přehled dalších dilemat 5 minut, závěr 10 minut.\n\nRytmus každého dilematu: scénář na slidu, hlasování podle intuice, výsledky a diskuse s těmi, kdo hlasovali na krajích, a nakonec jádro dilematu s příkladem z kampaně."
+      "notes": "Přednáška na 90 minut: úvod a kampaň 25 minut, deset dilemat po 5 minutách, přehled dalších dilemat 5 minut, závěr 10 minut.\n\nRytmus každého dilematu: scénář na slidu, hlasování podle intuice, výsledky a diskuse s těmi, kdo hlasovali na krajích, a nakonec jádro dilematu s příkladem z kampaně.",
+      "bg": "forest"
     },
     {
       "type": "qr",
@@ -16,7 +17,6 @@
       "text": "Naskenujte QR kód nebo otevřete adresu. Bez registrace, hlasování je anonymní.",
       "notes": "Počkej, až se připojí většina sálu. Hlasování před výkladem: lidé se nenechají ovlivnit tvým postojem a vždycky je materiál k diskusi."
     },
-
     {
       "type": "question",
       "section": "Úvod",
@@ -24,7 +24,10 @@
       "qtype": "scale",
       "kicker": "Vstupní anketa",
       "text": "Měla by politická strana používat AI v kampani?",
-      "scale": { "min": "rozhodně ne", "max": "rozhodně ano" }
+      "scale": {
+        "min": "rozhodně ne",
+        "max": "rozhodně ano"
+      }
     },
     {
       "type": "results",
@@ -32,7 +35,6 @@
       "question_id": "q1",
       "notes": "Výsledek jen krátce okomentuj a řekni, že se ke stejné otázce na konci vrátíte."
     },
-
     {
       "type": "question",
       "section": "Úvod",
@@ -41,11 +43,26 @@
       "kicker": "Odhad rozpočtu",
       "text": "Kolik podle vás stála kampaň Zeleného Brna do zastupitelstva města Brna?",
       "options": [
-        { "id": "a", "label": "do 500 tisíc Kč" },
-        { "id": "b", "label": "500 tisíc až 2 miliony Kč" },
-        { "id": "c", "label": "2 až 5 milionů Kč" },
-        { "id": "d", "label": "5 až 15 milionů Kč" },
-        { "id": "e", "label": "více než 15 milionů Kč" }
+        {
+          "id": "a",
+          "label": "do 500 tisíc Kč"
+        },
+        {
+          "id": "b",
+          "label": "500 tisíc až 2 miliony Kč"
+        },
+        {
+          "id": "c",
+          "label": "2 až 5 milionů Kč"
+        },
+        {
+          "id": "d",
+          "label": "5 až 15 milionů Kč"
+        },
+        {
+          "id": "e",
+          "label": "více než 15 milionů Kč"
+        }
       ]
     },
     {
@@ -54,7 +71,6 @@
       "question_id": "q2",
       "notes": "Kampaň stála zhruba milion korun a ostatní velké subjekty měly rozpočty výrazně vyšší. Placená politická reklama na Facebooku, Instagramu a Googlu přitom vůbec nebyla k dispozici. Kampaň tedy stála na dobrovolnících, osobním kontaktu, emailech, organickém dosahu na sítích a vlastních nástrojích."
     },
-
     {
       "type": "question",
       "section": "Úvod",
@@ -69,7 +85,13 @@
       "question_id": "q3",
       "notes": "Word cloud nech na plátně a přejdi k představení kampaně. Na konci představení se k němu vrať a ukaž, co v něm chybělo."
     },
-
+    {
+      "type": "section",
+      "section": "Kampaň Zeleného Brna",
+      "title": "Kampaň ==Zeleného Brna==",
+      "subtitle": "Základní informace o kampani a kde všude v ní pracovala AI",
+      "notes": "Představení kampaně, asi 10 minut. Word cloud z otázky 3 nech v hlavě publika, na konci bloku se k němu vrátíme."
+    },
     {
       "type": "big-number",
       "section": "Kampaň Zeleného Brna",
@@ -201,30 +223,12 @@
       "question_id": "q3",
       "notes": "Porovnej jejich představu se skutečností. Pravděpodobně chybí: analýza dat, editace programu, přepisy debat, programování webů a nástrojů."
     },
-
     {
-      "type": "list",
-      "section": "Kde se AI mýlila",
-      "title": "Kde se AI mýlila",
-      "blocks": [
-        {
-          "items": [
-            "chybí jí kontext mimo text",
-            "při stylizaci tiše posune fakt",
-            "posunutý fakt se v hotovém textu čte přirozeně",
-            "při editaci sama rozhoduje o škrtech a duplicitách"
-          ]
-        }
-      ],
-      "notes": "[Doplnit konkrétní časté chyby z vlastního přehledu.]\n\nProjdi časté chyby z přehledu. Hlavní pointa: AI nejčastěji selhávala tam, kde je potřeba znalost kontextu mimo text, a nejnebezpečnější jsou chyby, kdy při stylizaci tiše posune fakt, protože se v hotovém textu čtou úplně přirozeně.\n\nPřechod k etice: „Teď víte, co AI v kampani dělala a kde se mýlila. Zbývá otázka, co dělat smí.“"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 1: Ekologická stopa",
-      "kicker": "Dilema 1",
-      "title": "Ekologická stopa",
-      "text": "Strana zelených se veřejně zaváže, že AI v kampani nepoužije. Nakonec jí chybí 0,3 procenta do pěti procent a do zastupitelstva se nedostane."
+      "type": "section",
+      "section": "Dilemata",
+      "title": "Co AI ==smí==",
+      "subtitle": "Deset dilemat: nejdřív hlasujete, pak diskutujeme",
+      "notes": "Přechod k etice: „Teď víte, co AI v kampani dělala a kde se mýlila. Zbývá otázka, co dělat smí.“\n\nRytmus každého dilematu: scénář, hlasování podle intuice, výsledky a diskuse, jádro dilematu s příkladem z kampaně."
     },
     {
       "type": "question",
@@ -233,7 +237,11 @@
       "qtype": "scale",
       "scenario": "Strana zelených se veřejně zaváže, že AI v kampani nepoužije. Nakonec jí chybí 0,3 procenta do pěti procent a do zastupitelstva se nedostane.",
       "text": "Bylo to rozhodnutí správné?",
-      "scale": { "min": "správné rozhodnutí", "max": "chyba" }
+      "scale": {
+        "min": "správné rozhodnutí",
+        "max": "chyba"
+      },
+      "kicker": "Dilema 1: Ekologická stopa"
     },
     {
       "type": "results",
@@ -245,16 +253,9 @@
       "type": "text",
       "section": "Dilema 1: Ekologická stopa",
       "kicker": "Jádro dilematu",
-      "title": "Integrita, nebo šance něco změnit?",
+      "title": "Integrita, nebo ==šance něco změnit==?",
       "text": "Má strana, která kritizuje dopady technologie, tuto technologii odmítnout kvůli vlastní integritě? I když tím oslabí šanci prosadit politiku, která by ty dopady řešila?",
       "notes": "Jádro: Má strana, která kritizuje dopady technologie, tuto technologii odmítnout kvůli vlastní integritě, i když tím oslabí svou šanci prosadit politiku, která by ty dopady řešila?\n\nStřetávají se dvě etické logiky. Etika integrity říká, že strana má jednat v souladu s tím, co hlásá. Konsekvencialistická etika se ptá, co se reálně změní: když se jedna strana AI vzdá, emise datacenter klesnou zanedbatelně, ale šance zelené politiky se zmenší. Je to dilema jednostranného odzbrojení.\n\nDatacentra spotřebovala v roce 2024 zhruba 1,5 % světové elektřiny a do roku 2030 má spotřeba vzrůst zhruba na dvojnásobek, hlavně kvůli AI (IEA). K dalším dopadům patří podmínky lidí, kteří data pro modely označují, a autorská práva tvůrců. Možné východisko je princip přiměřenosti, tedy AI tam, kde výrazně zvyšuje kvalitu nebo dosah, a otevřenost v tom, jak ji strana používá.\n\nPříklad z kampaně: Analýza okrskových dat a AI generované video ve stylu GTA. Obojí jste dělali, ale každé má úplně jiný poměr přínosu a stopy.\n\nOtázka do diskuse: Kde by měla zelená strana hranici mít? Analýza dat, texty, obrázky, video pro zábavu?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 2: Demokratizace",
-      "kicker": "Dilema 2",
-      "title": "Demokratizace"
     },
     {
       "type": "question",
@@ -263,11 +264,24 @@
       "qtype": "single",
       "text": "Komu AI v politické soutěži pomůže nejvíc?",
       "options": [
-        { "id": "a", "label": "malým stranám" },
-        { "id": "b", "label": "velkým stranám" },
-        { "id": "c", "label": "dezinformátorům" },
-        { "id": "d", "label": "nikomu konkrétně" }
-      ]
+        {
+          "id": "a",
+          "label": "malým stranám"
+        },
+        {
+          "id": "b",
+          "label": "velkým stranám"
+        },
+        {
+          "id": "c",
+          "label": "dezinformátorům"
+        },
+        {
+          "id": "d",
+          "label": "nikomu konkrétně"
+        }
+      ],
+      "kicker": "Dilema 2: Demokratizace"
     },
     {
       "type": "results",
@@ -279,16 +293,9 @@
       "type": "text",
       "section": "Dilema 2: Demokratizace",
       "kicker": "Jádro dilematu",
-      "title": "Levnější expertíza pro všechny",
-      "text": "AI zlevňuje expertízu, která byla dřív dostupná jen bohatým kampaním. Vyrovnává tím soutěž. Stejně ale zlevňuje práci těm, kdo soutěž poškozují.",
-      "notes": "Jádro: AI zlevňuje expertízu, která byla dřív dostupná jen bohatým kampaním. Vyrovnává tím soutěž, ale stejně tak zlevňuje práci těm, kdo soutěž poškozují.\n\nAI zlevňuje hlavně intelektuální práci: analýzy, texty a programování. Billboardy, tisk, placené zaměstnance a čas lidí v terénu nezlevní, takže peníze dál rozhodují o velké části kampaně. A výsledky jsou jen tak dobré, jak dobře je člověk umí zkontrolovat. Vzácným zdrojem se tak stává odbornost, díky které člověk pozná, kdy se AI mýlí.\n\nStejné zlevnění platí i pro okrajové a dezinformační aktéry, kteří dřív na profesionální komunikaci neměli. Demokratizace prostředků tedy demokratizuje i manipulaci.\n\nPříklad z kampaně: Kampaň za zhruba milion měla analytiku, šest webů, segmentovaný emailing a přípravu na debaty, na které by dřív potřebovala tým konzultantů. Chyby AI přitom odhaloval člověk s praxí v kampaních.\n\nOtázka do diskuse: Troufli byste si s AI vést kampaň, i když jste žádnou nikdy nedělali? Co by se podle vás pokazilo?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 3: Data a profilování",
-      "kicker": "Dilema 3",
-      "title": "Data a profilování"
+      "title": "Levnější ==expertíza a služby== pro všechny",
+      "text": "AI zlevňuje expertízu a služby, které byly dřív dostupné jen bohatým kampaním. Vyrovnává tím soutěž. Stejně ale zlevňuje práci těm, kdo soutěž poškozují.",
+      "notes": "Jádro: AI zlevňuje expertízu a služby, které byly dřív dostupné jen bohatým kampaním. Vyrovnává tím soutěž, ale stejně tak zlevňuje práci těm, kdo soutěž poškozují.\n\nAI zlevňuje hlavně intelektuální práci: analýzy, texty a programování. Billboardy, tisk, placené zaměstnance a čas lidí v terénu nezlevní, takže peníze dál rozhodují o velké části kampaně. A výsledky jsou jen tak dobré, jak dobře je člověk umí zkontrolovat. Vzácným zdrojem se tak stává odbornost, díky které člověk pozná, kdy se AI mýlí.\n\nStejné zlevnění platí i pro okrajové a dezinformační aktéry, kteří dřív na profesionální komunikaci neměli. Demokratizace prostředků tedy demokratizuje i manipulaci.\n\nPříklad z kampaně: Kampaň za zhruba milion měla analytiku, šest webů, segmentovaný emailing a přípravu na debaty, na které by dřív potřebovala tým konzultantů. Chyby AI přitom odhaloval člověk s praxí v kampaních.\n\nOtázka do diskuse: Troufli byste si s AI vést kampaň, i když jste žádnou nikdy nedělali? Co by se podle vás pokazilo?"
     },
     {
       "type": "question",
@@ -298,13 +305,32 @@
       "ladder": true,
       "text": "Od kterého kroku je práce s daty za hranou?",
       "options": [
-        { "id": "A", "label": "kampaň analyzuje výsledky voleb po okrscích" },
-        { "id": "B", "label": "rozesílá emaily podle témat, která lidé sami označili v dotazníku" },
-        { "id": "C", "label": "AI z odpovědí v dotazníku odhadne názory lidí i na témata, na která se nikdo neptal" },
-        { "id": "D", "label": "AI projde veřejné profily podporovatelů na sítích a odhadne jejich postoje" },
-        { "id": "E", "label": "AI napíše každému podporovateli jinou zprávu na míru podle jeho odvozeného profilu" },
-        { "id": "nikde", "label": "nikde" }
-      ]
+        {
+          "id": "A",
+          "label": "kampaň analyzuje výsledky voleb po okrscích"
+        },
+        {
+          "id": "B",
+          "label": "rozesílá emaily podle témat, která lidé sami označili v dotazníku"
+        },
+        {
+          "id": "C",
+          "label": "AI z odpovědí v dotazníku odhadne názory lidí i na témata, na která se nikdo neptal"
+        },
+        {
+          "id": "D",
+          "label": "AI projde veřejné profily podporovatelů na sítích a odhadne jejich postoje"
+        },
+        {
+          "id": "E",
+          "label": "AI napíše každému podporovateli jinou zprávu na míru podle jeho odvozeného profilu"
+        },
+        {
+          "id": "nikde",
+          "label": "nikde"
+        }
+      ],
+      "kicker": "Dilema 3: Data a profilování"
     },
     {
       "type": "results",
@@ -316,16 +342,9 @@
       "type": "text",
       "section": "Dilema 3: Data a profilování",
       "kicker": "Jádro dilematu",
-      "title": "Porozumění, nebo profilování?",
+      "title": "Porozumění, nebo ==profilování==?",
       "text": "Analýza dat je legitimní základ strategie. Kde ale končí porozumění voličům a začíná profilování jejich přesvědčení?",
       "notes": "Jádro: Analýza dat je legitimní základ strategie. Kde ale končí porozumění voličům a začíná profilování jejich přesvědčení?\n\nKlasická analýza po okrscích pracuje s agregovanými daty. AI umožňuje jít na úroveň jednotlivců a hlavně odvozovat: z podpisu petice, otevřeného emailu nebo odpovědi v dotazníku umí odhadnout názory člověka na celou řadu témat. A umí každému napsat jinou zprávu, což by žádná kampaň dřív ručně nezvládla.\n\nNařízení EU o politické reklamě (TTPA) od října 2025 zakazuje u online politické reklamy cílení na základě profilování podle citlivých údajů, a to i odvozených, například politických názorů. Etika jde dál než zákon. Rozumné kritérium je účelové omezení: lidé dali souhlas k tomu, k čemu data dali, ne ke skládání profilu.\n\nPříklad z kampaně: Segmentace dotazníku do šesti person a emaily podle témat, která lidé sami zvolili (krok B).\n\nOtázka do diskuse: Proč je rozdíl mezi krokem B a C pro většinu z vás tak velký, když technicky jde o stejná data?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 4: Autenticita",
-      "kicker": "Dilema 4",
-      "title": "Autenticita"
     },
     {
       "type": "question",
@@ -335,13 +354,32 @@
       "ladder": true,
       "text": "Od kterého kroku už kandidát nevystupuje za sebe?",
       "options": [
-        { "id": "A", "label": "AI opraví překlepy v jeho příspěvku" },
-        { "id": "B", "label": "AI napíše návrh, kandidát ho přepíše" },
-        { "id": "C", "label": "AI napíše text, kandidát ho jen schválí" },
-        { "id": "D", "label": "AI píše příspěvky pod jeho jménem a on je nečte" },
-        { "id": "E", "label": "jeho hlasový klon natáčí videa" },
-        { "id": "nikde", "label": "nikde" }
-      ]
+        {
+          "id": "A",
+          "label": "AI opraví překlepy v jeho příspěvku"
+        },
+        {
+          "id": "B",
+          "label": "AI napíše návrh, kandidát ho přepíše"
+        },
+        {
+          "id": "C",
+          "label": "AI napíše text, kandidát ho jen schválí"
+        },
+        {
+          "id": "D",
+          "label": "AI píše příspěvky pod jeho jménem a on je nečte"
+        },
+        {
+          "id": "E",
+          "label": "jeho hlasový klon natáčí videa"
+        },
+        {
+          "id": "nikde",
+          "label": "nikde"
+        }
+      ],
+      "kicker": "Dilema 4: Autenticita"
     },
     {
       "type": "results",
@@ -353,17 +391,9 @@
       "type": "text",
       "section": "Dilema 4: Autenticita",
       "kicker": "Jádro dilematu",
-      "title": "S kým volič komunikuje?",
+      "title": "S kým volič ==komunikuje==?",
       "text": "Politici vždy měli autory projevů. Kdy se pomoc s formulací mění v klamání voličů o tom, s kým komunikují?",
       "notes": "Jádro: Politici vždy měli autory projevů. Kdy se pomoc s formulací mění v klamání voličů o tom, s kým komunikují?\n\nZměnil se objem. Dřív politik komunikoval projevy, články v médiích, rozhovory a knihami. Dnes od něj kampaň čeká nekončící proud příspěvků, emailů, podcastů, odpovědí do anket a videí. To jeden člověk při zaměstnání sám nevytvoří.\n\nKritéria: vlastnictví obsahu (umí ho obhájit bez papíru), informovaný souhlas (ví, co se jeho jménem posílá) a nesimulování osobního vztahu.\n\nPříklad z kampaně: Příprava na debaty, kdy se kandidátka učila nazpaměť bloky připravené s AI. Vystupuje ještě za sebe? Pokud obsah vychází z jejích postojů, podle mě ano. Autenticita se ztrácí, když formulace začne určovat postoj.\n\nOtázka do diskuse: Posunula by se vaše hranice, kdyby místo AI psal texty placený autor? Pokud ano, v čem je rozdíl?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 5: Škálovaný dialog s voliči",
-      "kicker": "Dilema 5",
-      "title": "Škálovaný dialog s voliči",
-      "text": "Paní napíše kandidátce dlouhý email o tom, že nemůže sehnat byt. Za deset minut dostane vstřícnou osobní odpověď podepsanou kandidátkou. Odpověď napsala AI a kandidátka ji jen odklikla."
     },
     {
       "type": "question",
@@ -372,7 +402,11 @@
       "qtype": "scale",
       "scenario": "Paní napíše kandidátce dlouhý email o tom, že nemůže sehnat byt. Za deset minut dostane vstřícnou osobní odpověď podepsanou kandidátkou. Odpověď napsala AI a kandidátka ji jen odklikla.",
       "text": "Je to v pořádku?",
-      "scale": { "min": "v pořádku", "max": "klamání voliče" }
+      "scale": {
+        "min": "v pořádku",
+        "max": "klamání voliče"
+      },
+      "kicker": "Dilema 5: Škálovaný dialog s voliči"
     },
     {
       "type": "results",
@@ -384,17 +418,9 @@
       "type": "text",
       "section": "Dilema 5: Škálovaný dialog s voliči",
       "kicker": "Jádro dilematu",
-      "title": "Osobní zájem ve velkém",
+      "title": "Osobní zájem ==ve velkém==",
       "text": "AI umožňuje odpovědět stovkám lidí a vytváří dojem osobního zájmu, který je pravdivý jen zčásti. Malé straně ale poprvé dává kapacitu podněty občanů skutečně zpracovat.",
       "notes": "Jádro: AI umožňuje odpovědět stovkám lidí, kteří kampani píšou. Vytváří tím dojem osobního zájmu, který je pravdivý jen zčásti. Zároveň malé straně poprvé dává kapacitu podněty občanů skutečně zpracovat.\n\nVelká strana může mít člověka, který se poště věnuje na plný úvazek. Malá ne a podněty by bez AI zůstaly nepřečtené. Škálované zpracování umožňuje najít dobré náměty a vidět, co lidi trápí.\n\nHranice vede tam, kde se z podnětů něco reálně stane a kde odpověď aspoň schválil člověk, který ví, co se jeho jménem slibuje.\n\nPříklad z kampaně: [Doplnit, jak jste v kampani odpovídali na emaily a dotazy voličů.]\n\nOtázka do diskuse: Změnilo by se něco, kdyby na konci odpovědi stálo, že ji připravila AI? A chtěli byste vy sami dostat rychlou odpověď od AI, pomalou od člověka, nebo žádnou?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 6: Program",
-      "kicker": "Dilema 6",
-      "title": "Program",
-      "text": "Kapitolu volebního programu o bydlení napíše AI na základě rešerše zahraničních řešení a garant za stranu ji schválí."
     },
     {
       "type": "question",
@@ -403,7 +429,11 @@
       "qtype": "scale",
       "scenario": "Kapitolu volebního programu o bydlení napíše AI na základě rešerše zahraničních řešení a garant za stranu ji schválí.",
       "text": "Je to legitimní program strany?",
-      "scale": { "min": "plně legitimní", "max": "nelegitimní" }
+      "scale": {
+        "min": "plně legitimní",
+        "max": "nelegitimní"
+      },
+      "kicker": "Dilema 6: Program"
     },
     {
       "type": "results",
@@ -415,16 +445,9 @@
       "type": "text",
       "section": "Dilema 6: Program",
       "kicker": "Jádro dilematu",
-      "title": "Responzivita, nebo podbízení?",
+      "title": "Responzivita, nebo ==podbízení==?",
       "text": "AI umí najít, co funguje jinde, i nabídnout každé skupině, co chce slyšet. Kde končí responzivita a začíná podbízení? A kdo za program nese odpovědnost?",
       "notes": "Jádro: AI umí najít, co funguje jinde, a přizpůsobit to místnímu kontextu. Stejně dobře umí každé skupině nabídnout přesně to, co chce slyšet. Kde je hranice mezi responzivitou a podbízením a kdo nese za program odpovědnost?\n\nRešerše, jak Vídeň řeší obecní bydlení nebo Mnichov prázdninovou péči, dřív vyžadovala týdny práce. Strana, která to myslí vážně, může mít program kvalitnější a lépe ukotvený v praxi.\n\nRizika jsou tři: populismus z dat, kdy každé skupině slíbíte, co chce, i když to dohromady nedává soudržnou politiku; editorská moc modelu, který při úpravách rozhoduje, co škrtnout a co přesunout; a podobnost programů, protože modely sahají po stejných osvědčených příkladech. Program získává legitimitu z debaty uvnitř strany a odpovědnost musí zůstat jmenovitě u lidí.\n\nPříklad z kampaně: Editace 80 stran podkladů od garantů. AI sjednocovala jazyk, ale také rozhodovala o duplicitách a škrtech, a umí přitom potichu posunout fakt. Za každou kapitolu proto ručil konkrétní garant.\n\nOtázka do diskuse: Hodnotili byste to jinak, kdyby kapitolu napsal externí expert? Proč?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 7: Sociální sítě",
-      "kicker": "Dilema 7",
-      "title": "Sociální sítě"
     },
     {
       "type": "question",
@@ -432,7 +455,11 @@
       "question_id": "q10",
       "qtype": "scale",
       "text": "Od října 2025 Meta a Google v EU nepřijímají politickou reklamu. Pomohlo to demokracii, nebo uškodilo?",
-      "scale": { "min": "výrazně pomohlo", "max": "výrazně uškodilo" }
+      "scale": {
+        "min": "výrazně pomohlo",
+        "max": "výrazně uškodilo"
+      },
+      "kicker": "Dilema 7: Sociální sítě"
     },
     {
       "type": "results",
@@ -444,16 +471,9 @@
       "type": "text",
       "section": "Dilema 7: Sociální sítě",
       "kicker": "Jádro dilematu",
-      "title": "Méně peněz, více algoritmu",
+      "title": "Méně peněz, ==více algoritmu==",
       "text": "Zákaz placené politické reklamy oslabuje vliv peněz. O pozornosti ale teď rozhodují algoritmy platforem, které odměňují emoce a zjednodušení.",
       "notes": "Jádro: Zákaz placené politické reklamy oslabuje vliv peněz. Rozhodování o tom, kdo dostane pozornost, ale přenáší na algoritmy soukromých platforem, které odměňují emoce a zjednodušení.\n\nKdo chce dosah, musí ho získat organicky, tedy podle pravidel algoritmu. AI v tom hraje roli zesilovače: umí průmyslově optimalizovat háčky, délku videí a formáty. Algoritmus přitom odměňuje to, co baví, a ne to, co je pro rozhodnutí nejdůležitější.\n\nDruhá strana je stejně skutečná. Sítě přivádějí k politice lidi, ke kterým tradiční média nedosáhnou. Dilema se dá formulovat jako volba mezi širší účastí a nižší kvalitou politické debaty.\n\nPříklad z kampaně: Analýza ukázala, že voliči, kteří vás zvažovali, debatu na ČT většinou neviděli. Dosáhnout na ně šlo jen přes sítě. Kandidáti proto dostali návod podle osvědčených postupů, jak dělat obsah pro algoritmus.\n\nOtázka do diskuse: Má strana točit obsah, který baví, i když v něm skoro není politika?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 8: Označování AI obsahu",
-      "kicker": "Dilema 8",
-      "title": "Označování AI obsahu"
     },
     {
       "type": "question",
@@ -463,13 +483,32 @@
       "text": "Co z toho by kampaň měla voličům přiznat, že vzniklo s AI?",
       "hint": "Můžete vybrat více možností.",
       "options": [
-        { "id": "a", "label": "AI opravila překlepy a stylistiku letáku" },
-        { "id": "b", "label": "AI napsala text příspěvku, který kandidátka zveřejnila pod svým jménem" },
-        { "id": "c", "label": "AI vytvořila grafiku nebo ilustraci k příspěvku" },
-        { "id": "d", "label": "AI vygenerovala celé video" },
-        { "id": "e", "label": "AI napsala odpověď na email voliče a kandidátka ji odeslala" },
-        { "id": "f", "label": "na webu strany odpovídá na dotazy voličů chatbot" }
-      ]
+        {
+          "id": "a",
+          "label": "AI opravila překlepy a stylistiku letáku"
+        },
+        {
+          "id": "b",
+          "label": "AI napsala text příspěvku, který kandidátka zveřejnila pod svým jménem"
+        },
+        {
+          "id": "c",
+          "label": "AI vytvořila grafiku nebo ilustraci k příspěvku"
+        },
+        {
+          "id": "d",
+          "label": "AI vygenerovala celé video"
+        },
+        {
+          "id": "e",
+          "label": "AI napsala odpověď na email voliče a kandidátka ji odeslala"
+        },
+        {
+          "id": "f",
+          "label": "na webu strany odpovídá na dotazy voličů chatbot"
+        }
+      ],
+      "kicker": "Dilema 8: Označování AI obsahu"
     },
     {
       "type": "results",
@@ -481,17 +520,9 @@
       "type": "text",
       "section": "Dilema 8: Označování AI obsahu",
       "kicker": "Jádro dilematu",
-      "title": "Přiznat, nebo nechat pro sebe?",
-      "text": "Kdy musí kampaň přiznat, že něco vzniklo s AI, a kdy je to její soukromá pracovní pomůcka?",
-      "notes": "Jádro: Kdy musí kampaň přiznat, že něco vzniklo s AI, a kdy je to její soukromá pracovní pomůcka?\n\nOd srpna 2026 platí článek 50 AI Actu. Kdo zveřejňuje deepfake, musí ho viditelně označit, chatbot musí uživateli říct, že je AI, a poskytovatelé nástrojů musí výstupy strojově označovat. Deepfaky jsou nejviditelnější část debaty, ale pro kampaně je důležitější velká šedá zóna mezi zákonnou povinností a běžným používáním AI.\n\nUžitečné kritérium: změnil by volič svůj vztah k obsahu, kdyby věděl, jak vznikl? U korektury letáku asi ne, u odpovědi na osobní email pravděpodobně ano.\n\nPříklad z kampaně: Chatbot nad programem byl označený jako nástroj a odpovídal jen z programu. Video ve stylu GTA byla zjevná parodie.\n\nOtázka do diskuse: U které možnosti se sál nejvíc rozdělil? Proč zrovna tam?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 9: Transparentnost a právo na chybu",
-      "kicker": "Dilema 9",
-      "title": "Transparentnost a právo na chybu",
-      "text": "Zastupitelka se na jednání zakoktá a řekne zjevný nesmysl."
+      "title": "Přiznat, nebo ==nechat pro sebe==?",
+      "text": "Kdy musí kampaň přiznat, že něco vzniklo s AI, a kdy je to běžná pracovní pomůcka?",
+      "notes": "Jádro: Kdy musí kampaň přiznat, že něco vzniklo s AI, a kdy je to běžná pracovní pomůcka?\n\nOd srpna 2026 platí článek 50 AI Actu. Kdo zveřejňuje deepfake, musí ho viditelně označit, chatbot musí uživateli říct, že je AI, a poskytovatelé nástrojů musí výstupy strojově označovat. Deepfaky jsou nejviditelnější část debaty, ale pro kampaně je důležitější velká šedá zóna mezi zákonnou povinností a běžným používáním AI.\n\nUžitečné kritérium: změnil by volič svůj vztah k obsahu, kdyby věděl, jak vznikl? U korektury letáku asi ne, u odpovědi na osobní email pravděpodobně ano.\n\nPříklad z kampaně: Chatbot nad programem byl označený jako nástroj a odpovídal jen z programu. Video ve stylu GTA byla zjevná parodie.\n\nOtázka do diskuse: U které možnosti se sál nejvíc rozdělil? Proč zrovna tam?"
     },
     {
       "type": "question",
@@ -502,12 +533,28 @@
       "scenario": "Zastupitelka se na jednání zakoktá a řekne zjevný nesmysl.",
       "text": "Od kterého kroku je to za hranou?",
       "options": [
-        { "id": "A", "label": "město zveřejní automatický přepis jednání" },
-        { "id": "B", "label": "AI porovná, jak kdo hlasoval a co sliboval" },
-        { "id": "C", "label": "AI automaticky vyhledá všechna zaváhání a přeřeknutí" },
-        { "id": "D", "label": "opozice z toho udělá klip na sítě" },
-        { "id": "nikde", "label": "nikde" }
-      ]
+        {
+          "id": "A",
+          "label": "město zveřejní automatický přepis jednání"
+        },
+        {
+          "id": "B",
+          "label": "AI porovná, jak kdo hlasoval a co sliboval"
+        },
+        {
+          "id": "C",
+          "label": "AI automaticky vyhledá všechna zaváhání a přeřeknutí"
+        },
+        {
+          "id": "D",
+          "label": "opozice z toho udělá klip na sítě"
+        },
+        {
+          "id": "nikde",
+          "label": "nikde"
+        }
+      ],
+      "kicker": "Dilema 9: Transparentnost a právo na chybu"
     },
     {
       "type": "results",
@@ -519,16 +566,9 @@
       "type": "text",
       "section": "Dilema 9: Transparentnost a právo na chybu",
       "kicker": "Jádro dilematu",
-      "title": "Kontrola moci, nebo odrazující efekt?",
+      "title": "Kontrola moci, nebo ==odrazující efekt==?",
       "text": "Přepisy a analýza veřejných vystoupení posilují kontrolu moci. Mohou ale lidi odradit od vystupování a přesunout rozhodování do neveřejných prostor.",
       "notes": "Jádro: Přepisy a analýza veřejných vystoupení posilují kontrolu moci. Zároveň mohou lidi odradit od veřejného vystupování a přesunout rozhodování do neveřejných prostor, takže výsledkem bude méně transparentnosti.\n\nAI je silný protikorupční nástroj, umí projít smlouvy, usnesení a rozpočty. Přepisy ale přinášejí novou kvalitu: dají se prohledávat a každé zaváhání se dá automaticky vytáhnout. Když před lety přišly videopřenosy ze zastupitelstev, ochota vystupovat klesla. Literatura tomu říká odrazující efekt.\n\nMožné rozlišení: výkon veřejné moci (hlasování, rozhodnutí, argumentace) proti lidské stránce vystoupení (tréma, přeřeknutí).\n\nPříklad z kampaně: Přepisovali jste debaty, analyzovali výkony soupeřů a vybírali klipy. Norma, kterou si kampaň může stanovit: stříhat výroky, ne trému.\n\nOtázka do diskuse: Kde měla mít hranici naše kampaň?"
-    },
-
-    {
-      "type": "text",
-      "section": "Dilema 10: Komu svěřujeme data",
-      "kicker": "Dilema 10",
-      "title": "Komu svěřujeme data"
     },
     {
       "type": "question",
@@ -537,10 +577,20 @@
       "qtype": "single",
       "text": "Nahráli byste seznam dárců strany do komerčního chatbota, aby vám pomohl vybrat, koho oslovit?",
       "options": [
-        { "id": "a", "label": "ano" },
-        { "id": "b", "label": "ano, ale jen bez jmen a kontaktů" },
-        { "id": "c", "label": "ne" }
-      ]
+        {
+          "id": "a",
+          "label": "ano"
+        },
+        {
+          "id": "b",
+          "label": "ano, ale jen bez jmen a kontaktů"
+        },
+        {
+          "id": "c",
+          "label": "ne"
+        }
+      ],
+      "kicker": "Dilema 10: Komu svěřujeme data"
     },
     {
       "type": "results",
@@ -552,11 +602,10 @@
       "type": "text",
       "section": "Dilema 10: Komu svěřujeme data",
       "kicker": "Jádro dilematu",
-      "title": "Komu data ve skutečnosti dáváme?",
+      "title": "Komu data ==ve skutečnosti== dáváme?",
       "text": "Kampaň svěřuje komerčním modelům data, která by nikdy nesdílela s konkurencí. Komu je tím ve skutečnosti dává?",
       "notes": "Jádro: Kampaň svěřuje komerčním modelům data, která by nikdy nesdílela s konkurencí. Komu je tím ve skutečnosti dává?\n\nDo chatbotů putuje strategie, kontakty dárců, výsledky dotazníků, interní hodnocení kandidátů i podklady k povolebnímu vyjednávání, často bez velkého přemýšlení. Vzniká otázka ochrany osobních údajů podle GDPR, protože jde i o data voličů a dárců, kteří o tom nevědí.\n\nVzniká i otázka politické suverenity: infrastruktura demokratické soutěže běží na systémech několika soukromých firem, většinou mimo EU, jejichž podmínky se mohou kdykoli změnit. Pro malou stranu je vlastní provozování modelů nedostupné, takže volí mezi rizikem a nevýhodou.\n\nPříklad z kampaně: [Doplnit, jak jste řešili, která data do AI nahráváte.]\n\nOtázka do diskuse: Co z toho, co jste někdy nahráli do chatbota, byste neposlali e-mailem cizímu člověku?"
     },
-
     {
       "type": "list",
       "section": "Další dilemata",
@@ -588,7 +637,6 @@
       ],
       "notes": "Kampaň jako komunita: Práce, kterou AI převezme, bývala vstupní branou pro dobrovolníky.\n\nEroze důvěry: Když AI používají všichni, voliči začnou předpokládat, že je všechno syntetické.\n\nAI ve správě města: Po volbách se otázka přesouvá do vládnutí, například k hodnocení žádostí o obecní byt."
     },
-
     {
       "type": "question",
       "section": "Závěr",
@@ -596,14 +644,23 @@
       "qtype": "scale",
       "kicker": "Výstupní anketa",
       "text": "Měla by politická strana používat AI v kampani?",
-      "scale": { "min": "rozhodně ne", "max": "rozhodně ano" }
+      "scale": {
+        "min": "rozhodně ne",
+        "max": "rozhodně ano"
+      }
     },
     {
       "type": "compare",
       "section": "Závěr",
       "title": "Na začátku a na konci",
-      "question_ids": ["q1", "q14"],
-      "labels": ["Vstupní anketa", "Výstupní anketa"],
+      "question_ids": [
+        "q1",
+        "q14"
+      ],
+      "labels": [
+        "Vstupní anketa",
+        "Výstupní anketa"
+      ],
       "notes": "Ukaž vedle výsledku otázky 1 a okomentuj posun."
     },
     {

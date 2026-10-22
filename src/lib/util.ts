@@ -6,11 +6,12 @@ export function esc(s: unknown): string {
     .replace(/"/g, '&quot;');
 }
 
-/** Escaped text with **bold** and non-breaking spaces after Czech one-letter prepositions. */
+/** Escaped text with **bold**, ==highlight== and non-breaking spaces after Czech one-letter prepositions. */
 export function rich(s: string | undefined): string {
   if (!s) return '';
   return esc(s)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/==(.+?)==/g, '<em class="hl">$1</em>')
     .replace(/(^|[\s(„])([kvszaiouKVSZAIOU]) /g, '$1$2&nbsp;');
 }
 
@@ -46,4 +47,9 @@ export function storageSet(key: string, value: string): void {
   } catch {
     /* private mode or blocked storage: keep going without it */
   }
+}
+
+/** Plain text without inline markup. */
+export function plain(s: string | undefined): string {
+  return (s || '').replace(/\*\*|==/g, '');
 }

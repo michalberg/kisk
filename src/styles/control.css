@@ -99,8 +99,6 @@ body.ctl {
   margin: 0 0 10px;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 .preview {
@@ -110,7 +108,7 @@ body.ctl {
   position: relative;
 }
 .preview .stage.is-black::after {
-  content: 'PLÁTNO ZAČERNĚNO';
+  content: 'Plátno začerněno';
   position: absolute;
   inset: 0;
   z-index: 25;
@@ -223,8 +221,6 @@ body.ctl {
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   background: var(--line);
   color: var(--muted);
 }

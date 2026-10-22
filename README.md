@@ -103,4 +103,4 @@ Zátěžový test na chvíli otevře hlasování, na konci hlasy otázky smaže 
 
 ## Úpravy obsahu
 
-Slidy jsou v `src/data/slides.json`. Typy: `title`, `big-number`, `list`, `text`, `question`, `results`, `compare`, `qr`. Text v hranatých závorkách v `notes` se v ovladači zvýrazní jako poznámka k doplnění. `**tučně**` funguje v textech slidů.
+Slidy jsou v `src/data/slides.json`. Typy: `title`, `section` (zelený předěl), `big-number`, `list`, `text`, `question`, `results`, `compare`, `qr`. Volitelné `"bg": "forest"` dá slidu tmavě zelené pozadí, `==text==` zvýrazní slovo. QR kód se na otázkách ukazuje jen před prvním předělem, potom už jen krátká adresa. Text v hranatých závorkách v `notes` se v ovladači zvýrazní jako poznámka k doplnění. `**tučně**` funguje v textech slidů.

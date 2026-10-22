@@ -28,7 +28,9 @@ function draw(st: Store) {
   stage.classList.toggle('is-black', st.state.blackout);
 }
 
-createStore({ fetchResults: qid => backend.getResults(qid), onChange: draw });
+const store = createStore({ fetchResults: qid => backend.getResults(qid), onChange: draw });
+// word cloud layout measures text, so lay it out again once the brand fonts are in
+document.fonts?.ready.then(() => draw(store.st));
 
 // Double click toggles fullscreen (handy on the projector laptop).
 document.addEventListener('dblclick', () => {

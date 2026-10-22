@@ -9,7 +9,7 @@ import { isProfane } from '../lib/profanity';
 import { renderSlide, type RenderCtx } from '../lib/render';
 import { createStore, type Store } from '../lib/store';
 import type { State } from '../lib/types';
-import { esc, storageGet, storageSet, votesLabel } from '../lib/util';
+import { esc, plain, storageGet, storageSet, votesLabel } from '../lib/util';
 
 const app = document.getElementById('app')!;
 const params = new URLSearchParams(location.search);
@@ -121,6 +121,7 @@ function start() {
     onChange: draw,
   });
 
+  document.fonts?.ready.then(() => draw(store.st));
   bind();
   tick();
   setInterval(tick, 1000);
@@ -130,7 +131,7 @@ function slideLabel(i: number): string {
   const s = slides[i];
   switch (s.type) {
     case 'question':
-      return `Otázka ${s.question_id.slice(1)}: ${s.text}`;
+      return `Otázka ${s.question_id.slice(1)}: ${plain(s.text)}`;
     case 'results':
       return `Výsledky ${s.question_id.slice(1)}`;
     case 'compare':
@@ -140,7 +141,7 @@ function slideLabel(i: number): string {
     case 'qr':
       return `QR: ${s.title}`;
     default:
-      return s.title;
+      return plain(s.title);
   }
 }
 
@@ -282,7 +283,10 @@ function toggle(field: 'voting_open' | 'show_results' | 'blackout') {
   const s = current();
   if (!s) return;
   if (field !== 'blackout' && !s.active_question) return;
-  push({ ...s, [field]: !s[field] });
+  const next = { ...s, [field]: !s[field] };
+  // revealing results ends the vote (dilemma slides show results in place)
+  if (field === 'show_results' && next.show_results) next.voting_open = false;
+  push(next);
 }
 
 function bind() {

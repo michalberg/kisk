@@ -1,5 +1,5 @@
 import { chartFor, scaleChart, scaleStats } from './charts';
-import { prettyUrl, questions } from './deck';
+import { prettyUrl, qrUntil, questions } from './deck';
 import { qrSvg } from './qr';
 import type { QuestionSlide, Results, Slide, State } from './types';
 import { esc, fmtNum, rich, votesLabel } from './util';
@@ -41,23 +41,49 @@ function optionList(q: QuestionSlide): string {
       return `<li>${mark}<span>${rich(o.label)}</span></li>`;
     })
     .join('');
-  return `<ul class="q-opts${(q.options || []).length > 5 ? ' dense' : ''}">${items}</ul>${q.hint ? `<p class="q-hint">${rich(q.hint)}</p>` : ''}`;
+  return `<ul class="q-opts${(q.options || []).length > 4 ? ' dense' : ''}">${items}</ul>${q.hint ? `<p class="q-hint">${rich(q.hint)}</p>` : ''}`;
 }
 
 function questionHead(q: QuestionSlide, small = false): string {
   return `${q.kicker ? `<p class="kicker">${rich(q.kicker)}</p>` : ''}
-    ${q.scenario ? `<p class="scenario${small ? ' small' : ''}">${rich(q.scenario)}</p>` : ''}
-    <h2 class="q-text${small ? ' small' : ''}${q.text.length > 80 ? ' long' : ''}">${rich(q.text)}</h2>`;
+    ${q.scenario && !small ? `<p class="scenario">${rich(q.scenario)}</p>` : ''}
+    <h2 class="q-text${small ? ' small' : ''}${q.text.length > 50 ? ' long' : ''}">${rich(q.text)}</h2>`;
 }
 
 function hiddenResults(qid: string, ctx: RenderCtx): string {
   return `<div class="results-wait"><span class="big-count">${ctx.counts[qid] || 0}</span><span>${(ctx.counts[qid] || 0) === 1 ? 'hlas' : 'hlasů'}, výsledky za chvíli</span></div>`;
 }
 
+// Campaign asterisk from the Zelené Brno visual: six flared arms, slightly irregular.
+const STAR = (() => {
+  const angles = [0, 57, 118, 181, 238, 301];
+  const arm = 'M-7,2 L7,2 L14,-47 L-14,-47 Z';
+  const paths = angles
+    .map((a, i) => `<path d="${arm}" transform="translate(50 50) rotate(${a}) scale(${i % 2 ? 0.94 : 1})"/>`)
+    .join('');
+  return `<svg viewBox="0 0 100 100" aria-hidden="true"><g fill="currentColor">${paths}</g></svg>`;
+})();
+
+function star(color: 'pink' | 'green' | 'forest', x: number, y: number, size: number, rot = 0): string {
+  return `<span class="star c-${color}" style="left:${x - size / 2}cqw;top:${y - size / 2}cqw;width:${size}cqw;height:${size}cqw;transform:rotate(${rot}deg)">${STAR}</span>`;
+}
+
+/** Decorative asterisks at the edges, only on calm slides (never over charts or QR codes). */
+function stars(s: Slide, i: number): string {
+  if (s.type === 'section') return star('forest', 93, 24, 32, i % 2 ? 10 : -12) + star('pink', 80, 50, 12, 20);
+  if (s.type === 'title') return star('pink', 92, 46, 40, 8) + star('green', 80, 9, 10, -14);
+  if (s.type === 'big-number') return star('pink', 84, 26, 30, -10);
+  if (s.type === 'text' && s.bg === 'forest') return i % 2 ? star('pink', 95, 50, 24, 12) : star('green', 96, 6, 18, -8);
+  if (s.type === 'text') return star(i % 2 ? 'green' : 'pink', 98, 3, 13, i % 2 ? 14 : -6);
+  return '';
+}
+
 export function renderSlide(s: Slide | undefined, ctx: RenderCtx): string {
   if (!s) return '<div class="slide"></div>';
   const body = renderBody(s, ctx);
-  return `<div class="slide t-${s.type}" data-k="slide${ctx.index}">${body}${s.type === 'title' ? '' : footer(s, ctx)}</div>`;
+  const bg = s.type === 'section' ? ' bg-green' : s.bg === 'forest' ? ' bg-forest' : '';
+  const cls = `slide t-${s.type}${bg}`;
+  return `<div class="${cls}" data-k="slide${ctx.index}">${stars(s, ctx.index)}${body}${s.type === 'title' ? '' : footer(s, ctx)}</div>`;
 }
 
 function renderBody(s: Slide, ctx: RenderCtx): string {
@@ -68,6 +94,13 @@ function renderBody(s: Slide, ctx: RenderCtx): string {
         <h1>${rich(s.title)}</h1>
         ${s.subtitle ? `<p class="subtitle">${rich(s.subtitle)}</p>` : ''}
         ${s.small ? `<p class="small">${rich(s.small)}</p>` : ''}
+      </div>`;
+
+    case 'section':
+      return `<div class="section-wrap">
+        ${s.kicker ? `<p class="kicker">${rich(s.kicker)}</p>` : ''}
+        <h2 class="title">${rich(s.title)}</h2>
+        ${s.subtitle ? `<p class="lead">${rich(s.subtitle)}</p>` : ''}
       </div>`;
 
     case 'big-number':
@@ -118,10 +151,11 @@ function renderBody(s: Slide, ctx: RenderCtx): string {
         return `<div class="results-wrap">${questionHead(s, true)}<div class="chart">${chartFor(s, ctx.results[qid] ?? null, [88, 32])}</div></div>`;
       }
       const open = ctx.state.voting_open && ctx.state.active_question === qid;
-      return `<div class="q-wrap">
+      const withQr = ctx.index < qrUntil;
+      return `<div class="q-wrap${withQr ? '' : ' no-qr'}">
         <div class="q-main">${questionHead(s)}${optionList(s)}</div>
         <div class="q-side">
-          ${join(ctx)}
+          ${withQr ? join(ctx) : `<div class="join-url">${esc(prettyUrl(ctx.audienceUrl))}</div>`}
           <div class="counter${open ? ' open' : ''}"><span class="big-count">${ctx.counts[qid] || 0}</span><span>${open ? votesLabel(ctx.counts[qid] || 0).replace(/^\d+ /, '') : 'hlasování zavřené'}</span></div>
         </div>
       </div>`;

@@ -4,6 +4,13 @@ import type { Deck, QuestionSlide, Slide, State } from './types';
 export const deck = data as Deck;
 export const slides: Slide[] = deck.slides;
 
+/** Question slides before the first section divider show the QR code; later ones
+ * only the short address (everyone has joined by then). */
+export const qrUntil = (() => {
+  const i = slides.findIndex(s => s.type === 'section');
+  return i < 0 ? slides.length : i;
+})();
+
 export const questions = new Map<string, QuestionSlide>();
 for (const s of slides) if (s.type === 'question') questions.set(s.question_id, s);
 

@@ -13,7 +13,7 @@ export interface Placed {
   color: number;
 }
 
-const FONT = '800 100px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+const FONT = '900 100px UrbanGrotesk, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
 let ctx: CanvasRenderingContext2D | null = null;
 
 function measure(word: string, size: number): number {
