@@ -1,0 +1,117 @@
+body.pv {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #e9f1ec;
+}
+.pv-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.pv-frame {
+  position: relative;
+  width: min(100%, calc((100vh - 120px) * 16 / 9));
+  box-shadow: 0 10px 40px -16px rgba(2, 40, 21, 0.35);
+}
+.pv-hit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  z-index: 30;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.pv-hit.prev {
+  left: 0;
+  cursor: w-resize;
+}
+.pv-hit.next {
+  right: 0;
+  width: 70%;
+  cursor: e-resize;
+}
+/* no live data in the preview */
+.pv .counter {
+  visibility: hidden;
+}
+.pv-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  background: var(--forest);
+  color: #fff;
+  font-weight: 700;
+}
+.pv-bar button {
+  min-width: 44px;
+  height: 40px;
+  padding: 0 12px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+}
+.pv-bar button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.pv-bar button[aria-pressed='true'] {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--dark);
+}
+.pv-pos {
+  font-family: var(--font-display);
+  font-size: 26px;
+  min-width: 70px;
+  text-align: center;
+}
+.pv-sec {
+  flex: 1;
+  min-width: 120px;
+  color: var(--pink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pv-notes {
+  max-height: 34vh;
+  overflow: auto;
+  padding: 16px 20px;
+  background: #fff;
+  border-top: 3px solid var(--green);
+  font-size: 18px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.pv-notes mark {
+  background: #ffe36e;
+  font-weight: 800;
+  padding: 0 3px;
+}
+body.pv:fullscreen .pv-bar,
+body.pv:fullscreen .pv-notes {
+  display: none;
+}
+body.pv:fullscreen .pv-main {
+  padding: 0;
+  background: #fff;
+}
+body.pv:fullscreen .pv-frame {
+  width: min(100vw, calc(100vh * 16 / 9));
+  box-shadow: none;
+}
+/* preview is read-only: no QR or address on question slides */
+.pv .q-side {
+  visibility: hidden;
+}
