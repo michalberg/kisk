@@ -1,0 +1,23 @@
+{
+  "name": "kisk-prezentace",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "migrate": "node --env-file=.env scripts/run-sql.mjs supabase/migration.sql",
+    "loadtest": "node --env-file=.env scripts/load-test.mjs",
+    "test:security": "node --env-file=.env scripts/security-test.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "qrcode-generator": "^2.0.4"
+  },
+  "devDependencies": {
+    "pg": "^8.16.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

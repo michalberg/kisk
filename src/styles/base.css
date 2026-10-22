@@ -1,0 +1,35 @@
+/* Zelené Brno colours, adapted for a projector: white slides, dark green ink,
+   bright green and pink only for large shapes (bars, markers, tags). */
+:root {
+  --forest: #104f2d;
+  --dark: #022815;
+  --green: #0bd26f;
+  --green-text: #08773f; /* bright green darkened for text on white */
+  --pink: #ffa6d1;
+  --ink: #022815;
+  --muted: #4b6357;
+  --line: #dfe9e3;
+  --soft: #f1f7f3;
+  --bg: #ffffff;
+  --danger: #b3261e;
+
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+button {
+  font: inherit;
+}

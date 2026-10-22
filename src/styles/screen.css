@@ -1,0 +1,27 @@
+html,
+body.screen-page {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+body.screen-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+}
+body.screen-page .stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+}
+.conn {
+  position: fixed;
+  right: 12px;
+  bottom: 10px;
+  z-index: 30;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(2, 40, 21, 0.08);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
