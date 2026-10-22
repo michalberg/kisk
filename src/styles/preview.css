@@ -84,23 +84,7 @@ body.pv {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.pv-notes {
-  max-height: 34vh;
-  overflow: auto;
-  padding: 16px 20px;
-  background: #fff;
-  border-top: 3px solid var(--green);
-  font-size: 18px;
-  line-height: 1.5;
-  white-space: pre-wrap;
-}
-.pv-notes mark {
-  background: #ffe36e;
-  font-weight: 800;
-  padding: 0 3px;
-}
-body.pv:fullscreen .pv-bar,
-body.pv:fullscreen .pv-notes {
+body.pv:fullscreen .pv-bar {
   display: none;
 }
 body.pv:fullscreen .pv-main {

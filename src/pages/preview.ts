@@ -3,7 +3,6 @@ import '../styles/slides.css';
 import '../styles/preview.css';
 import { audienceUrl, slides, stateForSlide } from '../lib/deck';
 import { renderSlide } from '../lib/render';
-import { esc } from '../lib/util';
 
 // Static walk-through of all slides: no server, no votes. Slide number lives in
 // the URL hash (#12) so a slide can be linked directly.
@@ -11,7 +10,6 @@ import { esc } from '../lib/util';
 const $ = (id: string) => document.getElementById(id)!;
 const url = audienceUrl();
 let i = 0;
-let notesOn = false;
 
 function fromHash(): number {
   const n = parseInt(location.hash.slice(1), 10);
@@ -27,10 +25,6 @@ function draw() {
   $('sec').textContent = s.section || '';
   ($('prev') as HTMLButtonElement).disabled = i === 0;
   ($('next') as HTMLButtonElement).disabled = i === slides.length - 1;
-  const notes = $('notes');
-  notes.hidden = !notesOn;
-  notes.innerHTML = s.notes ? esc(s.notes).replace(/\[([^\]]+)\]/g, '<mark>[$1]</mark>') : 'Bez poznámek';
-  $('notes-btn').setAttribute('aria-pressed', String(notesOn));
   if (location.hash !== `#${i + 1}`) history.replaceState(null, '', `#${i + 1}`);
 }
 
@@ -43,10 +37,6 @@ $('prev').addEventListener('click', () => go(i - 1));
 $('next').addEventListener('click', () => go(i + 1));
 $('hit-prev').addEventListener('click', () => go(i - 1));
 $('hit-next').addEventListener('click', () => go(i + 1));
-$('notes-btn').addEventListener('click', () => {
-  notesOn = !notesOn;
-  draw();
-});
 $('full').addEventListener('click', () => document.body.requestFullscreen?.().catch(() => {}));
 
 document.addEventListener('keydown', e => {
@@ -59,10 +49,7 @@ document.addEventListener('keydown', e => {
     go(i - 1);
   } else if (e.key === 'Home') go(0);
   else if (e.key === 'End') go(slides.length - 1);
-  else if (e.key === 'n' || e.key === 'N') {
-    notesOn = !notesOn;
-    draw();
-  } else if (e.key === 'f' || e.key === 'F') document.body.requestFullscreen?.().catch(() => {});
+  else if (e.key === 'f' || e.key === 'F') document.body.requestFullscreen?.().catch(() => {});
 });
 
 // swipe on touch screens

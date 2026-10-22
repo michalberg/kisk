@@ -7,7 +7,7 @@ Interaktivní prezentace pro přednášku na KISK MUNI. Nahrazuje PowerPoint i M
 | Publikum | `https://michalberg.github.io/kisk/` | telefony v sále (QR kód) |
 | Plátno | `https://michalberg.github.io/kisk/screen/` | projektor |
 | Ovladač | `https://michalberg.github.io/kisk/control/?key=TAJNY_KLIC` | notebook prezentujícího |
-| Náhled | `https://michalberg.github.io/kisk/preview/` | proklikání všech slidů bez hlasování (šipky, N poznámky, F celá obrazovka, `#12` odkaz na slide) |
+| Náhled | `https://michalberg.github.io/kisk/preview/` | proklikání všech slidů bez hlasování (šipky, F celá obrazovka, `#12` odkaz na slide) |
 
 Všechny tři stránky sdílí stav v Supabase (projekt `zpysnfkjvgdpyoykhcnv`). Změny chodí přes Realtime. Když spojení vypadne, stránky se každé 3 sekundy dotazují samy.
 
