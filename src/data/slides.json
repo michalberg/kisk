@@ -45,23 +45,23 @@
       "options": [
         {
           "id": "a",
-          "label": "do 500 tisíc Kč"
+          "label": "300 tisíc Kč"
         },
         {
           "id": "b",
-          "label": "500 tisíc až 2 miliony Kč"
+          "label": "680 tisíc Kč"
         },
         {
           "id": "c",
-          "label": "2 až 5 milionů Kč"
+          "label": "1 milion Kč"
         },
         {
           "id": "d",
-          "label": "5 až 15 milionů Kč"
+          "label": "1,4 milionu Kč"
         },
         {
           "id": "e",
-          "label": "více než 15 milionů Kč"
+          "label": "2 miliony Kč"
         }
       ]
     },
@@ -226,8 +226,8 @@
     {
       "type": "section",
       "section": "Dilemata",
-      "title": "Co AI ==smí==",
-      "subtitle": "Deset dilemat: nejdřív hlasujete, pak diskutujeme",
+      "title": "Dilemata ==AI v kampaních==",
+      "subtitle": "Nejdřív hlasujete, pak diskutujeme",
       "notes": "Přechod k etice: „Teď víte, co AI v kampani dělala a kde se mýlila. Zbývá otázka, co dělat smí.“\n\nRytmus každého dilematu: scénář, hlasování podle intuice, výsledky a diskuse, jádro dilematu s příkladem z kampaně."
     },
     {
@@ -277,6 +277,10 @@
           "label": "dezinformátorům"
         },
         {
+          "id": "e",
+          "label": "všem"
+        },
+        {
           "id": "d",
           "label": "nikomu konkrétně"
         }
@@ -294,8 +298,8 @@
       "section": "Dilema 2: Demokratizace",
       "kicker": "Jádro dilematu",
       "title": "Levnější ==expertíza a služby== pro všechny",
-      "text": "AI zlevňuje expertízu a služby, které byly dřív dostupné jen bohatým kampaním. Vyrovnává tím soutěž. Stejně ale zlevňuje práci těm, kdo soutěž poškozují.",
-      "notes": "Jádro: AI zlevňuje expertízu a služby, které byly dřív dostupné jen bohatým kampaním. Vyrovnává tím soutěž, ale stejně tak zlevňuje práci těm, kdo soutěž poškozují.\n\nAI zlevňuje hlavně intelektuální práci: analýzy, texty a programování. Billboardy, tisk, placené zaměstnance a čas lidí v terénu nezlevní, takže peníze dál rozhodují o velké části kampaně. A výsledky jsou jen tak dobré, jak dobře je člověk umí zkontrolovat. Vzácným zdrojem se tak stává odbornost, díky které člověk pozná, kdy se AI mýlí.\n\nStejné zlevnění platí i pro okrajové a dezinformační aktéry, kteří dřív na profesionální komunikaci neměli. Demokratizace prostředků tedy demokratizuje i manipulaci.\n\nPříklad z kampaně: Kampaň za zhruba milion měla analytiku, šest webů, segmentovaný emailing a přípravu na debaty, na které by dřív potřebovala tým konzultantů. Chyby AI přitom odhaloval člověk s praxí v kampaních.\n\nOtázka do diskuse: Troufli byste si s AI vést kampaň, i když jste žádnou nikdy nedělali? Co by se podle vás pokazilo?"
+      "text": "AI zlevňuje expertízu a služby, které byly dřív dostupné jen bohatým kampaním. Vyrovnává tím soutěž. Stejně ale zlevňuje práci těm, kdo mají nekalé záměry.",
+      "notes": "Jádro: AI zlevňuje expertízu a služby, které byly dřív dostupné jen bohatým kampaním. Vyrovnává tím soutěž, ale stejně tak zlevňuje práci těm, kdo mají nekalé záměry.\n\nAI zlevňuje hlavně intelektuální práci: analýzy, texty a programování. Billboardy, tisk, placené zaměstnance a čas lidí v terénu nezlevní, takže peníze dál rozhodují o velké části kampaně. A výsledky jsou jen tak dobré, jak dobře je člověk umí zkontrolovat. Vzácným zdrojem se tak stává odbornost, díky které člověk pozná, kdy se AI mýlí.\n\nStejné zlevnění platí i pro okrajové a dezinformační aktéry, kteří dřív na profesionální komunikaci neměli. Demokratizace prostředků tedy demokratizuje i manipulaci.\n\nPříklad z kampaně: Kampaň za zhruba milion měla analytiku, šest webů, segmentovaný emailing a přípravu na debaty, na které by dřív potřebovala tým konzultantů. Chyby AI přitom odhaloval člověk s praxí v kampaních.\n\nOtázka do diskuse: Troufli byste si s AI vést kampaň, i když jste žádnou nikdy nedělali? Co by se podle vás pokazilo?"
     },
     {
       "type": "question",
@@ -539,11 +543,11 @@
         },
         {
           "id": "B",
-          "label": "AI porovná, jak kdo hlasoval a co sliboval"
+          "label": "novinář výrok z přepisu doslova ocituje v článku"
         },
         {
           "id": "C",
-          "label": "AI automaticky vyhledá všechna zaváhání a přeřeknutí"
+          "label": "AI automaticky vyhledá všechna zaváhání a přeřeknutí zastupitelů"
         },
         {
           "id": "D",
@@ -613,7 +617,7 @@
       "blocks": [
         {
           "items": [
-            "**Odpovědnost za chyby.** Za fakt na letáku ručí člověk, který ho podepsal.",
+            "**Odpovědnost za chyby.** Kdo ručí za obsah?",
             "**Syntetická občanská společnost.** AI zlevňuje falešné komentáře a účty.",
             "**Sbližování stylu.** Kampaně začínají znít a vypadat stejně.",
             "**Volič se ptá AI, koho volit.** Modely se stávají novým gatekeeperem."
@@ -664,21 +668,11 @@
       "notes": "Ukaž vedle výsledku otázky 1 a okomentuj posun."
     },
     {
-      "type": "list",
+      "type": "title",
       "section": "Závěr",
-      "title": "Pět otázek pro každé použití AI v kampani",
-      "numbered": true,
-      "blocks": [
-        {
-          "items": [
-            "Zvyšuje to kvalitu demokratické soutěže, nebo jen náš dosah?",
-            "Obstál by výstup, kdyby volič věděl, jak vznikl?",
-            "Ověřil fakta člověk, který za ně ručí?",
-            "Používáme data jen k účelu, ke kterému nám je lidé dali?",
-            "Je za každou odpovědí voliči někdo, kdo ví, co se jeho jménem slibuje?"
-          ]
-        }
-      ]
+      "bg": "forest",
+      "title": "Děkuji za ==pozornost==",
+      "subtitle": "Michal Berg, michal.berg@zeleni.cz"
     }
   ]
 }
