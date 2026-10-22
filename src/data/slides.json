@@ -77,7 +77,7 @@
       "question_id": "q3",
       "qtype": "wordcloud",
       "text": "Kde se podle vás AI v kampani používá?",
-      "hint": "Napište jedno až dvě slova."
+      "hint": "Použijte vlastní slova."
     },
     {
       "type": "results",

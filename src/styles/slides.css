@@ -378,11 +378,11 @@
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: 1fr 23cqw;
-  gap: 4.5cqw;
+  grid-template-columns: 1fr 25cqw;
+  gap: 4cqw;
 }
 .q-wrap.no-qr {
-  grid-template-columns: 1fr 15cqw;
+  grid-template-columns: 1fr 25cqw;
 }
 .no-qr .q-side {
   justify-content: flex-end;
@@ -529,11 +529,11 @@
   border: 0.25cqw solid var(--line);
 }
 .join-url {
-  font-size: 1.9cqw;
+  font-size: 1.7cqw;
   font-weight: 900;
   color: var(--forest);
   text-align: center;
-  word-break: break-all;
+  white-space: nowrap;
 }
 .counter {
   display: flex;
